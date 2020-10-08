@@ -1,0 +1,6 @@
+./model/exceptions/InvalidCoordException.java
+./model/exceptions/InvalidCoordExceptions.java
+./model/exceptions/XOException.java
+./model/Field.java
+./model/Figure.java
+./XOCLI.java
