@@ -3,4 +3,6 @@
 ./model/exceptions/XOException.java
 ./model/Field.java
 ./model/Figure.java
+./model/Game.java
+./model/Player.java
 ./XOCLI.java
