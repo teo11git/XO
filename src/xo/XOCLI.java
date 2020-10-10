@@ -2,6 +2,7 @@ package xo;
 
 import xo.model.*;
 import xo.model.exceptions.*;
+import xo.view.ConsoleView;
 import java.awt.Point;
 
 public class XOCLI {
@@ -26,5 +27,8 @@ public class XOCLI {
 		System.out.println(pl1.getFigure());
 		System.out.println(newXO.getName());
 		System.out.println(newXO.getPlayers());		
+
+		ConsoleView cw = new ConsoleView();
+		cw.showField(field);
 	}
 }

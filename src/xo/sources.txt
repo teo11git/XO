@@ -5,4 +5,5 @@
 ./model/Figure.java
 ./model/Game.java
 ./model/Player.java
+./view/ConsoleView.java
 ./XOCLI.java
