@@ -9,10 +9,9 @@ public class Game {
 	final String name;
 
 	public Game(final String name, 
-				final Field field,
 			    final Player[] players) {
 		this.players = players;
-		this.field = field;
+		this.field = new Field();
 		this.name = name;
 	}
 

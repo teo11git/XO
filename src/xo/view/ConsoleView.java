@@ -8,10 +8,11 @@ import xo.model.exceptions.*;
 public class ConsoleView {
 
 	public void show(Game game) {
-				
+		Field field = game.getField();
+		showField(field);
 	}
 
-	public void showField(Field field) {
+	private void showField(Field field) {
 		int i = 0;
 		int j = 0;
 		int amount = field.getSize() * field.getSize();
