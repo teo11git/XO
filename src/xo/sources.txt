@@ -1,3 +1,4 @@
+./controllers/RandomMoveGen.java
 ./model/exceptions/InvalidCoordException.java
 ./model/exceptions/InvalidCoordExceptions.java
 ./model/exceptions/XOException.java
@@ -5,5 +6,6 @@
 ./model/Figure.java
 ./model/Game.java
 ./model/Player.java
+./tests/Tests.java
 ./view/ConsoleView.java
 ./XOCLI.java
