@@ -1,3 +1,4 @@
+./controllers/CurrentMoveController.java
 ./controllers/MoveController.java
 ./controllers/RandomMoveGen.java
 ./model/exceptions/AllreadyOccupiedException.java

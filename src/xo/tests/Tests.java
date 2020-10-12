@@ -77,6 +77,31 @@ public class Tests {
 			System.out.println("Exception from tests: 77 = AllreadyOccupied");
 			System.out.println("Good!");
 		}
+	}
+
+	public void countFiguresTest() {
+	Game game = createNewGame();
+	Field field = game.getField();
+	MoveController mc = new MoveController();
+
+	Point pnt1 = new Point(0, 0);
+	Point pnt2 = new Point(1, 1);
+	Point pnt3 = new Point(1, 2);
+	Point pnt4 = new Point(2, 2);
+
+	try {
+		mc.applyFigure(field, Figure.X, pnt1);
+		mc.applyFigure(field, Figure.X, pnt2);
+		mc.applyFigure(field, Figure.X, pnt3);
+		mc.applyFigure(field, Figure.X, pnt4);
+	} catch (InvalidCoordException e) {
+
+	} catch (AllreadyOccupiedException e) {
+
+	}
+		CurrentMoveController cmc = new CurrentMoveController();
+		int result = cmc.countFigures(field);
+		System.out.println(result);
 
 	}
 

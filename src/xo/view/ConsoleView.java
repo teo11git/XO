@@ -57,9 +57,5 @@ public class ConsoleView {
 			System.out.println("OMG from ConsoleView");
 			return null;
 		}
-
-
-
 	}
-
 }

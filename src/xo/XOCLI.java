@@ -11,6 +11,7 @@ public class XOCLI {
 	public static void main(final String[] args) {
 		Tests test = new Tests();
 		//test.testRandomMoveGen();
-		test.applyFigureTest();
+		//test.applyFigureTest();
+		test.countFiguresTest();
 	}
 }
