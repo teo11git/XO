@@ -10,6 +10,7 @@ public class XOCLI {
 
 	public static void main(final String[] args) {
 		Tests test = new Tests();
-		test.testRandomMoveGen();
+		//test.testRandomMoveGen();
+		test.applyFigureTest();
 	}
 }

@@ -34,6 +34,51 @@ public class Tests {
 		}
 		System.out.println("makeRandomMove works well");
 	}
+	
+	public void applyFigureTest() {
+		MoveController mc = new MoveController();
+
+		Game game = createNewGame();
+		Field field = game.getField();
+
+		Point pnt1 = new Point(0, 0);
+		Point pnt2 = new Point(1, 1);
+		Point pnt3 = new Point(2, 2);
+		try {
+			mc.applyFigure(field, Figure.X, pnt1);
+			mc.applyFigure(field, Figure.X, pnt2);
+			mc.applyFigure(field, Figure.X, pnt3);
+		} catch (InvalidCoordException e) { 
+
+		} catch (AllreadyOccupiedException e) {
+
+		}
+
+		ConsoleView cv = new ConsoleView();
+		cv.show(game);
+
+		System.out.println("Try to check exceptions");
+		try {
+			Point pntErr = new Point(10, 20);
+			mc.applyFigure(field, Figure.X, pntErr);
+			
+		} catch (InvalidCoordException e) {
+			System.out.println("Exception from tests: 64 = InvalidPoint");
+			System.out.println("Good!!");
+		} catch (AllreadyOccupiedException e) {
+
+		}
+
+		try {
+			mc.applyFigure(field, Figure.O, pnt2);
+		} catch (InvalidCoordException e) {
+
+		} catch (AllreadyOccupiedException e) {
+			System.out.println("Exception from tests: 77 = AllreadyOccupied");
+			System.out.println("Good!");
+		}
+
+	}
 
 	private Game createNewGame() {
 		Player pl1 = new Player("Fed", Figure.X);

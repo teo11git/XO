@@ -1,6 +1,7 @@
+./controllers/MoveController.java
 ./controllers/RandomMoveGen.java
+./model/exceptions/AllreadyOccupiedException.java
 ./model/exceptions/InvalidCoordException.java
-./model/exceptions/InvalidCoordExceptions.java
 ./model/exceptions/XOException.java
 ./model/Field.java
 ./model/Figure.java
