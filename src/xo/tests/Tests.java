@@ -105,6 +105,38 @@ public class Tests {
 
 	}
 
+	public void makeFieldTest() {
+		ConsoleView cv = new ConsoleView();
+		FieldGenerator fieldGen = new FieldGenerator();
+		Game game = createNewGame();
+		Field field = game.getField();
+		fieldGen.makeField(field);
+		cv.show(game);
+	}
+
+	public void getWinnerTest() {
+		Game game = createNewGame();
+		Field field = game.getField();
+		MoveController mc = new MoveController();
+
+		Point point1 = new Point(2, 0);
+		Point point2 = new Point(1, 1);
+		Point point3 = new Point(1, 2);
+		try {
+			mc.applyFigure(field, Figure.X, point1);
+			mc.applyFigure(field, Figure.X, point2);
+			mc.applyFigure(field, Figure.X, point3);
+		} catch (InvalidCoordException e) {
+
+		} catch (AllreadyOccupiedException e) {
+
+		}
+
+		WinnerController wc = new WinnerController();
+		Figure fg = wc.getWinner(field);
+		System.out.println("Winner is " + fg);
+	}
+
 	private Game createNewGame() {
 		Player pl1 = new Player("Fed", Figure.X);
 		Player pl2 = new Player("Mash", Figure.O);

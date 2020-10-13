@@ -12,6 +12,11 @@ public class XOCLI {
 		Tests test = new Tests();
 		//test.testRandomMoveGen();
 		//test.applyFigureTest();
-		test.countFiguresTest();
+		//test.countFiguresTest();
+		//test.makeFieldTest();
+		//test.makeFieldTest();
+		//test.makeFieldTest();
+		//test.makeFieldTest();
+		test.getWinnerTest();
 	}
 }

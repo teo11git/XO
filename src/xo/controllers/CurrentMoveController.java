@@ -8,9 +8,21 @@ import java.awt.Point;
 
 public class CurrentMoveController {
 		
-	public Figure currentMove() {
+	public Figure currentMove(Field field) 
+					throws NoWinnerException{
+		WinnerController wc = new WinnerController();
+		int amount = field.getSize() * field.getSize();
 
-		return Figure.X;
+		if (wc.getWinner(field) != null){
+			return null;
+		}
+		if(countFigures(field) == amount) {
+			throw new NoWinnerException();
+		}
+		if(countFigures(field) % 2 == 0) {
+			return Figure.X;
+		}
+		return Figure.O;
 	}
 
 	public int countFigures(Field field) { //make private
@@ -25,7 +37,6 @@ public class CurrentMoveController {
 			int x = i - j * fieldSize;
 			int y = j;
 			Point pnt = new Point(x, y);
-			System.out.println("" + pnt.x +  pnt.y);
 			try {
 				fg = field.getFigure(pnt);
 			} catch(InvalidCoordException e) {
@@ -39,7 +50,6 @@ public class CurrentMoveController {
 			if (i % fieldSize == 0) {
 				j ++;
 			}
-
 		}
 		return counter;
 	}
