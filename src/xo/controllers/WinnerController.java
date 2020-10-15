@@ -9,10 +9,10 @@ import java.awt.Point;
 public class WinnerController {
 
 	public Figure getWinner(Field field) {
-		System.out.println("Try to check Rows");
+		//System.out.println("Try to check Rows");
 		Figure fg = checkRows(field);
 		if (fg == null) {
-		System.out.println("try to check Colls");
+		//System.out.println("try to check Colls");
 			fg = checkColls(field);
 		}
 		if (fg == null) {
@@ -108,11 +108,9 @@ public class WinnerController {
 		int counter = 0;
 
 		Point initialPoint1 = new Point(i, j);
-		Point initialPoint2 = new Point(fieldSize - 1, j);
 		Figure initialFigure1 = getFigure(field, initialPoint1);
-		System.out.println("InitialFigure is " + initialFigure1);
-		Figure initialFigure2 = getFigure(field, initialPoint2);
-		System.out.println("InitialFigure is " + initialFigure2);
+		//System.out.println("InitialFigure is " + initialFigure1);
+		//System.out.println("InitialFigure is " + initialFigure2);
 	
 
 		while(i + 1 < fieldSize) {
@@ -121,8 +119,8 @@ public class WinnerController {
 			}
 			i ++;
 			j ++;
-			System.out.println("I is " + i);
-			System.out.println("j is " + j);		
+			//System.out.println("I is " + i);
+			//System.out.println("j is " + j);		
 			Point nextPoint = new Point(i, j);
 			Figure figure = getFigure(field, nextPoint);
 			if (initialFigure1 == figure) {
@@ -136,13 +134,15 @@ public class WinnerController {
 		counter = 0;
 		i = fieldSize - 1;
 		j = 0;
-
+		Point initialPoint2 = new Point(fieldSize - 1, j);
+		Figure initialFigure2 = getFigure(field, initialPoint2);
+		
 		while(j + 1 < fieldSize) {
 			if (initialFigure2 == null) {
 			break;
 			}
-			System.out.println("I is " + i);
-			System.out.println("j is " + j);		
+			//System.out.println("I is " + i);
+			//System.out.println("j is " + j);		
 			i --;
 			j ++;
 			Point nextPoint = new Point(i, j);
