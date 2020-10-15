@@ -17,6 +17,6 @@ public class XOCLI {
 		//test.makeFieldTest();
 		//test.makeFieldTest();
 		//test.makeFieldTest();
-		test.getWinnerTest();
+		//test.getWinnerTest();
 	}
 }
