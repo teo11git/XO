@@ -4,15 +4,16 @@ package xo.view;
 import xo.model.*;
 import java.awt.Point;
 import xo.model.exceptions.*;
+import java.util.Scanner;
 
 public class ConsoleView {
 
 	public void show(Game game) {
-		Field field = game.getField();
-		showField(field);
+
 	}
 
-	private void showField(Field field) {
+	private void showField(Field field) 
+			throws InvalidCoordException {
 		int i = 0;
 		int j = 0;
 		int amount = field.getSize() * field.getSize();
@@ -25,7 +26,7 @@ public class ConsoleView {
 			int x = i - j * fieldSize;
 			int y = j;
 			Point pnt = new Point(x, y);
-			Figure fg = getFigureToPrint(field, pnt);
+			Figure fg = field.getFigure(pnt);
  	
 			if (fg != null) {
 				line +=" " + fg + " ";	
@@ -49,13 +50,8 @@ public class ConsoleView {
 	private void printLine(Field field) {
 
 	}
+	
+	public String askName() {
 
-	private Figure getFigureToPrint(Field field, Point point) {
-		try {
-			return  field.getFigure(point);
-		} catch (InvalidCoordException e){
-			System.out.println("OMG from ConsoleView");
-			return null;
-		}
 	}
 }
