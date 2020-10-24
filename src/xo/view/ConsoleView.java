@@ -13,7 +13,7 @@ public class ConsoleView {
 
 	}
 
-	private void showField(Field field) 
+	public void showField(Field field) 
 			throws InvalidCoordException {
 		int i = 0;
 		int j = 0;
